@@ -1,0 +1,46 @@
+RewriteEngine On
+php_flag output_buffering on
+RewriteRule ^index\.html$ index.php [L]
+RewriteRule ^blog\.html$ blog.php [L]
+RewriteRule ^iletisim\.html$ iletisim.php [L]
+RewriteRule ^sikca-sorulan-sorular\.html$ sss.php [L]
+RewriteRule ^hesap-bilgileri\.html$ hesap_bilgileri.php [L]
+RewriteRule ^404\.html$ 404.php [L]
+RewriteRule ^sitemap\.html$ sitemap.php [L]
+RewriteRule ^bakim\.html$ bakim.php [L]
+RewriteRule ^arama\.html$ arama.php [L]
+RewriteRule ^filter\.html$ filter.php [L]
+RewriteRule ^firsat-urunleri\.html$ firsat_urunleri.php [L]
+RewriteRule ^indirimli-urunler\.html$ indirimli_urunler.php [L]
+RewriteRule ^cok-satanlar\.html$ cok_satan_urunler.php [L]
+RewriteRule ^kayit\.html$ kayit.php [L]
+RewriteRule ^giris\.html$ giris.php [L]
+RewriteRule ^hesabim\.html$ hesabim.php [L]
+RewriteRule ^cikis\.html$ cikis.php [L]
+RewriteRule ^uye-bilgilerim\.html$ uye_bilgilerim.php [L]
+RewriteRule ^sifre-islemi\.html$ sifre_islemleri.php [L]
+RewriteRule ^sepet\.html$ sepet.php [L]
+RewriteRule ^sepet-adres\.html$ sepet_adres.php [L]
+RewriteRule ^sepet-odeme\.html$ sepet_odeme.php [L]
+RewriteRule ^siparis-onayi\.html$ sepet_siparis_onay.php [L]
+RewriteRule ^siparis-sonuc\.html$ sepet_sonuc.php [L]
+RewriteRule ^siparislerim\.html$ siparislerim.php [L]
+RewriteRule ^yorumlarim\.html$ yorumlarim.php [L]
+RewriteRule ^favorilerim\.html$ favorilerim.php [L]
+RewriteRule ^adreslerim\.html$ adreslerim.php [L]
+RewriteRule ^destek-taleplerim\.html$ destek_taleplerim\.php [L]
+RewriteRule ^hesap-iptali\.html$ hesap_iptali.php [L]
+RewriteRule ^yeni-destek-talebi\.html$ yeni_destek_talebi.php [L]
+RewriteRule ^destek-talebi/(.*?)?$ destek_talebi_detay.php?&id=$1 [L,QSA]
+RewriteRule ^siparis-(.*?)?$ siparis.php?&referans_no=$1 [L,QSA]
+RewriteRule ^blog-kategori/([0-9a-zA-Z-_]+).html$ blog_kategori.php?&id=$1 [L,QSA]
+RewriteRule ^bilgi/([0-9a-zA-Z-_]+).html$ kurumsal.php?&id=$1 [L,QSA]
+RewriteRule ^blog/([0-9a-zA-Z-_]+).html$ blog_detay.php?&id=$1 [L,QSA]
+RewriteRule ^kategori/([0-9a-zA-Z-_]+)/([0-9]+)$ kategori.php?seflink=$1&no=$2 [L,QSA]
+RewriteRule ^([0-9a-zA-Z-_]+).html$ urun_detay.php?&id=$1 [L,QSA]
+php_flag register_globals on
+ErrorDocument 404 https://www.hddizayn.com/demolar/doqi/404.html
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
